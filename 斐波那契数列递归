@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int func(int n)
+{
+	if(n==1)
+	return 1;
+	if(n==2)
+	return 1;
+	if(n>2)
+	     return func(n-1)+func(n-2);
+}
+int main()
+{
+	cout<<"输入第n个的位置数："<<endl;
+	int a;
+	cin>>a; 
+	cout<<"结果是："<<endl; 
+	cout<<func(a)<<endl;
+	return 0;
+}
