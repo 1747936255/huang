@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int func(int n)
+{
+	int sum=1;
+	for(int i=1;i<=n;i++)
+	{
+		sum*=i;
+	}
+	return sum;
+}
+int main()
+{
+	cout<<func(10)<<endl;
+	return 0;
+}
+时间复杂度：O(n)；for循环了n次
