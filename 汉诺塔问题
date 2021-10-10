@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int times = 0;
+void moveDisks(int n,string source,string dest,string temp)
+{
+   if (n>0)
+   {
+   	moveDisks(n-1,source,temp,dest); 
+   	cout << "Move a disk("<<n<<") from "<< source << " to " << dest << endl;
+   	moveDisks(n-1,temp,dest,source); 
+   	times += 1; 
+   }
+}
+int main()
+{
+	cout << "Please put a number" <<endl;
+	int i = 0;
+	cin >> i;
+	moveDisks(i,"peg 1", "peg 3", "peg 2");
+	cout << "All the disks have been moved by "<<times<<" times!";
+	return 0;
+}
