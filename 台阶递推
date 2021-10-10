@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int func(int n)
+{
+	int per=1;
+	int perper=2;
+	int all;
+	if(n==1)
+	return 1;
+	if(n==2)
+	return 1;
+	if(n>2)
+	{
+	  for(int i=3;i<=n;i++)
+	    {
+		 all=per+perper;
+	     per=perper;
+	     perper=all;
+	    }
+	    return all;
+    }
+}
+int main()
+{
+	cout<<func(10)<<endl;
+	return 0;
+}
+
+时间复杂度：O(n)；当n=1或n=2时，复杂度为O(1)，当n>2时，复杂度为O(n)
